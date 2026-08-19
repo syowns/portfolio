@@ -111,10 +111,11 @@ outputElement.appendChild(container);
     // 2. Define a JavaScript object for our http source and our data rows for the Living in the World grid
     var http_source = "https://upload.wikimedia.org/wikipedia/commons/";
     var living_in_the_world = [
-        {"flag": "0/01/Flag_of_California.svg", "greeting": "Hey", "description": "California - forever"},
-        {"flag": "b/b9/Flag_of_Oregon.svg", "greeting": "Hi", "description": "Oregon - 9 years"},
-        {"flag": "b/be/Flag_of_England.svg", "greeting": "Alright mate", "description": "England - 2 years"},
-        {"flag": "e/ef/Flag_of_Hawaii.svg", "greeting": "Aloha", "description": "Hawaii - 2 years"},
+          {flag: "https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg", greeting: "Hey", description: "California - 6 years"},
+  {flag: "https://upload.wikimedia.org/wikipedia/commons/b/b9/Flag_of_Minnesota.svg", greeting: "Aye", description: "Minnesota - 2 years"},
+  {flag: "https://upload.wikimedia.org/wikipedia/commons/b/be/Flag_of_California.svg", greeting: "Hi", description: "England - 6 years"},
+  {flag: "https://upload.wikimedia.org/wikipedia/commons/e/ef/Flag_of_Washington.svg", greeting: "Hi", description: "Washington - 3 years"}
+  {flag: "https://upload.wikimedia.org/wikipedia/commons/e/ef/Flag_of_California.svg", greeting: "Hey", description: "Washington - 3 months"}
     ];
 
     // 3a. Consider how to update style count for size of container
@@ -166,22 +167,22 @@ Here is what I did at those places
 
 Things I enjoy
 
-- I play the guitar and enjoy listening to rock, mountain bike, and hike- hopefully I'll be able to hike El Cajon this year
+- I play the guitar and enjoy listening to rock, mountain bike, hike- hopefully I'll be able to hike El Cajon this year, and buy & sell sports cards
 
 <comment>
 Gallery of Pics, scroll to the right for more ...
 </comment>
 <div class="image-gallery">
-  <img src="{{site.baseurl}}/images/about/missionary.jpg" alt="Image 1">
-  <img src="{{site.baseurl}}/images/about/john_tamara.jpg" alt="Image 2">
-  <img src="{{site.baseurl}}/images/about/tamara_fam.jpg" alt="Image 3">
-  <img src="{{site.baseurl}}/images/about/surf.jpg" alt="Image 4">
-  <img src="{{site.baseurl}}/images/about/john_lora.jpg" alt="Image 5">
-  <img src="{{site.baseurl}}/images/about/lora_fam.jpg" alt="Image 6">
-  <img src="{{site.baseurl}}/images/about/lora_fam2.jpg" alt="Image 7">
-  <img src="{{site.baseurl}}/images/about/pj_party.jpg" alt="Image 8">
-  <img src="{{site.baseurl}}/images/about/trent_family.png" alt="Image 9">
-  <img src="{{site.baseurl}}/images/about/claire.jpg" alt="Image 10">
-  <img src="{{site.baseurl}}/images/about/grandkids.jpg" alt="Image 11">
-  <img src="{{site.baseurl}}/images/about/farm.jpg" alt="Image 12">
+  <img src="/Users/aidan/Downloads/IMG_6959.HEIC" alt="Image 1">
+  <img src="/Users/aidan/Pictures/Photos Library.photoslibrary/resources/derivatives/C/CE78C147-C106-4A23-8FBC-1050D3272E94_1_105_c.jpeg" alt="Image 2">
+  <img src="/Users/aidan/Pictures/Photos Library.photoslibrary/resources/derivatives/5/5DC71417-7F21-44F1-8C0A-CB45E0760397_1_105_c.jpeg" alt="Image 3">
+  <img src="/Users/aidan/Pictures/Photos Library.photoslibrary/resources/derivatives/A/AE1D0710-DB6E-4F43-A703-EA34155C536B_1_105_c.jpeg" alt="Image 4">
+  <img src="/Users/aidan/Pictures/Photos Library.photoslibrary/resources/derivatives/6/61CBCD4E-3893-4D61-961C-1A9C50B5A7A2_1_105_c.jpeg" alt="Image 5">
+  <img src="/Users/aidan/Pictures/Photos Library.photoslibrary/resources/derivatives/3/351F42E0-0691-4727-8008-E703F60AFB3F_1_105_c.jpeg" alt="Image 6">
+  <img src="/Users/aidan/Pictures/Photos Library.photoslibrary/resources/derivatives/E/EE525ADE-8144-4045-A0CC-ED737C3E712D_1_105_c.jpeg" alt="Image 7">
+  <img src="/Users/aidan/Pictures/Photos Library.photoslibrary/resources/derivatives/B/B7B16FBD-EC77-4984-B900-2487E04254C0_1_105_c.jpeg" alt="Image 8">
+  <img src="/Users/aidan/Pictures/Photos Library.photoslibrary/resources/derivatives/1/1EA23F47-DC6B-437B-81F3-06EAA560CDB7_1_105_c.jpeg" alt="Image 9">
+  <img src="/Users/aidan/Pictures/Photos Library.photoslibrary/resources/derivatives/5/5535D0BE-9F90-48DF-B962-CEA844F6CAD7_1_105_c.jpeg" alt="Image 10">
+  <img src="/Users/aidan/Pictures/Photos Library.photoslibrary/resources/derivatives/E/E0F73788-7954-4557-8257-4A203930BDA0_1_105_c.jpeg" alt="Image 11">
+  <img src="/Users/aidan/Pictures/Photos Library.photoslibrary/resources/derivatives/B/B3AF741B-6317-4D05-A72B-5BBE20009B65_1_105_c.jpeg" alt="Image 12">
 </div>
