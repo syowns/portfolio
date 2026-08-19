@@ -11,6 +11,57 @@ Here are some places I have lived.
 
 <comment>
 Flags are made using Wikipedia images
+
+<div id="grid_container"></div>
+
+<script>
+var outputElement = document.getElementById("grid_container");
+
+outputElement.innerHTML = '';
+
+// Data array — CHANGE THESE to places you've lived or visited
+const living_in_the_world = [
+  {flag: "https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg", greeting: "Hey", description: "California - 6 years"},
+  {flag: "https://upload.wikimedia.org/wikipedia/commons/b/b9/Flag_of_Minnesota.svg", greeting: "Aye", description: "Minnesota - 2 years"},
+  {flag: "https://upload.wikimedia.org/wikipedia/commons/b/be/Flag_of_California.svg", greeting: "Hi", description: "England - 6 years"},
+  {flag: "https://upload.wikimedia.org/wikipedia/commons/e/ef/Flag_of_Washington.svg", greeting: "Hi", description: "Washington - 3 years"}
+  {flag: "https://upload.wikimedia.org/wikipedia/commons/e/ef/Flag_of_California.svg", greeting: "Hey", description: "Washington - 3 months"}
+];
+
+const container = document.createElement('div');
+container.id = 'grid_container';
+container.style.border = '2px solid';
+container.style.padding = '10px';
+container.style.display = 'grid';
+container.style.gridTemplateColumns = 'repeat(auto-fill, minmax(150px, 1fr))';
+container.style.gap = '10px';
+
+for (const location of living_in_the_world) {
+  const item = document.createElement('div');
+  item.style.padding = '10px';
+  item.style.textAlign = 'center';
+  item.style.borderRadius = '8px';
+  item.style.border = '1px solid';
+
+  const img = document.createElement('img');
+  img.src = location.flag;
+  img.alt = location.description;
+  img.style.width = '100%';
+
+  const greeting = document.createElement('h3');
+  greeting.textContent = location.greeting;
+
+  const desc = document.createElement('p');
+  desc.textContent = location.description;
+
+  item.appendChild(img);
+  item.appendChild(greeting);
+  item.appendChild(desc);
+  container.appendChild(item);
+}
+
+outputElement.appendChild(container);
+</script>
 </comment>
 
 <style>
