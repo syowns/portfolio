@@ -9,60 +9,6 @@ comments: true
 
 Here are some places I have lived.
 
-<comment>
-Flags are made using Wikipedia images
-
-<div id="grid_container"></div>
-
-<script>
-var outputElement = document.getElementById("grid_container");
-
-outputElement.innerHTML = '';
-
-// Data array — CHANGE THESE to places you've lived or visited
-const living_in_the_world = [
-  {flag: "https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg", greeting: "Hey", description: "California - 6 years"},
-  {flag: "https://upload.wikimedia.org/wikipedia/commons/b/b9/Flag_of_Minnesota.svg", greeting: "Aye", description: "Minnesota - 2 years"},
-  {flag: "https://upload.wikimedia.org/wikipedia/commons/b/be/Flag_of_California.svg", greeting: "Hi", description: "England - 6 years"},
-  {flag: "https://upload.wikimedia.org/wikipedia/commons/e/ef/Flag_of_Washington.svg", greeting: "Hi", description: "Washington - 3 years"}
-  {flag: "https://upload.wikimedia.org/wikipedia/commons/e/ef/Flag_of_California.svg", greeting: "Hey", description: "Washington - 3 months"}
-];
-
-const container = document.createElement('div');
-container.id = 'grid_container';
-container.style.border = '2px solid';
-container.style.padding = '10px';
-container.style.display = 'grid';
-container.style.gridTemplateColumns = 'repeat(auto-fill, minmax(150px, 1fr))';
-container.style.gap = '10px';
-
-for (const location of living_in_the_world) {
-  const item = document.createElement('div');
-  item.style.padding = '10px';
-  item.style.textAlign = 'center';
-  item.style.borderRadius = '8px';
-  item.style.border = '1px solid';
-
-  const img = document.createElement('img');
-  img.src = location.flag;
-  img.alt = location.description;
-  img.style.width = '100%';
-
-  const greeting = document.createElement('h3');
-  greeting.textContent = location.greeting;
-
-  const desc = document.createElement('p');
-  desc.textContent = location.description;
-
-  item.appendChild(img);
-  item.appendChild(greeting);
-  item.appendChild(desc);
-  container.appendChild(item);
-}
-
-outputElement.appendChild(container);
-</script>
-</comment>
 
 <style>
     /* Style looks pretty compact, 
@@ -113,9 +59,9 @@ outputElement.appendChild(container);
     var living_in_the_world = [
           {flag: "https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg", greeting: "Hey", description: "California - 6 years"},
   {flag: "https://upload.wikimedia.org/wikipedia/commons/b/b9/Flag_of_Minnesota.svg", greeting: "Aye", description: "Minnesota - 2 years"},
-  {flag: "https://upload.wikimedia.org/wikipedia/commons/b/be/Flag_of_California.svg", greeting: "Hi", description: "England - 6 years"},
-  {flag: "https://upload.wikimedia.org/wikipedia/commons/e/ef/Flag_of_Washington.svg", greeting: "Hi", description: "Washington - 3 years"}
-  {flag: "https://upload.wikimedia.org/wikipedia/commons/e/ef/Flag_of_California.svg", greeting: "Hey", description: "Washington - 3 months"}
+  {flag: "https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg", greeting: "Hi", description: "California - 6 years"},
+  {flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Flag_of_Washington.svg/3840px-Flag_of_Washington.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail", greeting: "Hi", description: "Washington - 3 years"},
+  {flag: "https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg", greeting: "Hey", description: "California - 3 months"}
     ];
 
     // 3a. Consider how to update style count for size of container
@@ -128,7 +74,7 @@ outputElement.appendChild(container);
         gridItem.className = "grid-item";  // This class name connects the gridItem to the CSS style elements
         // Add "img" HTML tag for the flag
         var img = document.createElement("img");
-        img.src = http_source + location.flag; // concatenate the source and flag
+        img.src = location.flag; // concatenate the source and flag
         img.alt = location.flag + " Flag"; // add alt text for accessibility
 
         // Add "p" HTML tag for the description
@@ -173,16 +119,16 @@ Things I enjoy
 Gallery of Pics, scroll to the right for more ...
 </comment>
 <div class="image-gallery">
-  <img src="/Users/aidan/Downloads/IMG_6959.HEIC" alt="Image 1">
-  <img src="/Users/aidan/Pictures/Photos Library.photoslibrary/resources/derivatives/C/CE78C147-C106-4A23-8FBC-1050D3272E94_1_105_c.jpeg" alt="Image 2">
-  <img src="/Users/aidan/Pictures/Photos Library.photoslibrary/resources/derivatives/5/5DC71417-7F21-44F1-8C0A-CB45E0760397_1_105_c.jpeg" alt="Image 3">
-  <img src="/Users/aidan/Pictures/Photos Library.photoslibrary/resources/derivatives/A/AE1D0710-DB6E-4F43-A703-EA34155C536B_1_105_c.jpeg" alt="Image 4">
-  <img src="/Users/aidan/Pictures/Photos Library.photoslibrary/resources/derivatives/6/61CBCD4E-3893-4D61-961C-1A9C50B5A7A2_1_105_c.jpeg" alt="Image 5">
-  <img src="/Users/aidan/Pictures/Photos Library.photoslibrary/resources/derivatives/3/351F42E0-0691-4727-8008-E703F60AFB3F_1_105_c.jpeg" alt="Image 6">
-  <img src="/Users/aidan/Pictures/Photos Library.photoslibrary/resources/derivatives/E/EE525ADE-8144-4045-A0CC-ED737C3E712D_1_105_c.jpeg" alt="Image 7">
-  <img src="/Users/aidan/Pictures/Photos Library.photoslibrary/resources/derivatives/B/B7B16FBD-EC77-4984-B900-2487E04254C0_1_105_c.jpeg" alt="Image 8">
-  <img src="/Users/aidan/Pictures/Photos Library.photoslibrary/resources/derivatives/1/1EA23F47-DC6B-437B-81F3-06EAA560CDB7_1_105_c.jpeg" alt="Image 9">
-  <img src="/Users/aidan/Pictures/Photos Library.photoslibrary/resources/derivatives/5/5535D0BE-9F90-48DF-B962-CEA844F6CAD7_1_105_c.jpeg" alt="Image 10">
-  <img src="/Users/aidan/Pictures/Photos Library.photoslibrary/resources/derivatives/E/E0F73788-7954-4557-8257-4A203930BDA0_1_105_c.jpeg" alt="Image 11">
-  <img src="/Users/aidan/Pictures/Photos Library.photoslibrary/resources/derivatives/B/B3AF741B-6317-4D05-A72B-5BBE20009B65_1_105_c.jpeg" alt="Image 12">
+  <img src="{{site.baseurl}}/images/about/photo1.jpg" alt="Image 1">
+  <img src="{{site.baseurl}}/images/about/photo2.jpg" alt="Image 2">
+  <img src="{{site.baseurl}}/images/about/photo3.jpg" alt="Image 3">
+  <img src="{{site.baseurl}}/images/about/photo4.jpg" alt="Image 4">
+  <img src="{{site.baseurl}}/images/about/photo5.jpg" alt="Image 5">
+  <img src="{{site.baseurl}}/images/about/photo6.jpg" alt="Image 6">
+  <img src="{{site.baseurl}}/images/about/photo7.jpg" alt="Image 7">
+  <img src="{{site.baseurl}}/images/about/photo8.jpg" alt="Image 8">
+  <img src="{{site.baseurl}}/images/about/photo9.jpg" alt="Image 9">
+  <img src="{{site.baseurl}}/images/about/photo10.jpg" alt="Image 10">
+  <img src="{{site.baseurl}}/images/about/photo11.jpg" alt="Image 11">
+  <img src="{{site.baseurl}}/images/about/photo12.jpg" alt="Image 12">
 </div>
