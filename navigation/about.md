@@ -132,3 +132,4 @@ Gallery of Pics, scroll to the right for more ...
   <img src="{{site.baseurl}}/images/about/photo11.jpg" alt="Image 11">
   <img src="{{site.baseurl}}/images/about/photo12.jpg" alt="Image 12">
 </div>
+<button onclick ="history.back()">←Back</button>
