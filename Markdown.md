@@ -1,499 +1,21 @@
-<!DOCTYPE html>
-<html lang="en"><head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.9.0 -->
-<title>Build a Markdown Page | Open Coding</title>
-<meta name="generator" content="Jekyll v3.9.5" />
-<meta property="og:title" content="Build a Markdown Page" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="JavaScript, HTML, CSS and Markdown are coding languages used by bloggers when developing in the GitHub Pages system. By using these languages, student developers can add functionality to their GitHub pages site." />
-<meta name="twitter:description" property="og:description" content="JavaScript, HTML, CSS and Markdown are coding languages used by bloggers when developing in the GitHub Pages system. By using these languages, student developers can add functionality to their GitHub pages site." />
-<meta property="og:site_name" content="Open Coding" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-08-23T00:00:00+00:00" />
-<meta property="article:modified_time" content="2023-08-23T00:00:00+00:00" />
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Build a Markdown Page" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-08-23T00:00:00+00:00","datePublished":"2023-08-23T00:00:00+00:00","description":"JavaScript, HTML, CSS and Markdown are coding languages used by bloggers when developing in the GitHub Pages system. By using these languages, student developers can add functionality to their GitHub pages site.","headline":"Build a Markdown Page","mainEntityOfPage":{"@type":"WebPage","@id":"/github/pages/markdown"},"url":"/github/pages/markdown"}</script>
-<!-- End Jekyll SEO tag -->
-<link id="main-stylesheet" rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Open Coding" />
-<!-- Minima start custom head snippets -->
-<!-- Favicon for browser tabs and bookmarks -->
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
+---
+layout: post
+toc: True
+breadcrumb: True
+title: Build a Markdown Page
+description: JavaScript, HTML, CSS and Markdown are coding languages used by bloggers when developing in the GitHub Pages system. By using these languages, student developers can add functionality to their GitHub pages site.
+permalink: /github/pages/markdown
+---
 
-<!-- Support for Apple devices (iPhone/iPad homescreen icon) -->
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+## HTML Fragments and Markdown
 
-<!-- Support for modern browsers and pinned tabs -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+**Building a front-end web application requires HTML, CSS, and JavaScript**. HTML is responsible for the content, CSS adds styling to the web page, and JavaScript adds functionality and interactivity.  **Markdown is a shorthand way of writing HTML**, the GitHub pages system transforms the Markdown into HTML.
 
-<!-- Google Fonts - commonly used across the site -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;600&family=Lato:wght@400;700&family=Montserrat:wght@400;600&family=Noto+Sans:wght@400;700&family=Merriweather:wght@400;700&family=Source+Code+Pro:wght@400;700&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&family=Press+Start+2P&display=swap" rel="stylesheet"><link rel="stylesheet" href="/assets/css/style.css">
-<script src="/assets/js/user-preferences.js"></script>
-<!-- Set up javaURI globally for OCS Analytics Tracker -->
-<script>
-    if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
-        window.javaURI = "http://localhost:8585";
-    } else {
-        window.javaURI = "https://spring.opencodingsociety.com";
-    }
-</script>
-<!-- OCS Analytics Tracking Script (loaded on every page) -->
-<script src="/assets/js/ocs-analytics-tracker.js" defer></script>
-<!-- Keyboard Shortcuts (Alt+Shift+key navigation, loaded on every page) -->
-<script>window.baseurl = "";</script>
-<script src="/assets/js/keyboard-shortcuts.js" defer></script>
+In GitHub Pages, **Jekyll serves as the build framework**. It takes your **choice of theme specified in the `_config.yml` file**, along with your Markdown, HTML, and notebook files, to construct a website.
 
-<!-- AI A/B Test Engine SDK (passes site.baseurl for asset resolution) -->
-<script src="https://ai-ab-test-engine.vercel.app/sdk.js"
-  data-site-baseurl=""
-  data-project-id="cmnfour780000f63gu69kg2v8"></script>
-<script type="importmap">
-{
-  "imports": {
-    "@assets/": "/assets/",
-    "@fortuneFinders/": "/assets/js/fortuneFinders/"
-  }
-}
-</script>
+A significant portion of the **frontend design work** has been done for you **through the selection and use of a theme**; this greatly **reduces the need to extensively write in CSS**.
 
-<!-- Minima end custom head snippets -->
- </head>
-<body>    <header class="site-header">
-        <div class="wrapper"><a class="site-title" rel="author" href="/" data-value="Open Coding">
-                <img id="site-logo" src="/images/logo.png" alt="Logo">
-            </a><nav class="site-nav">
-                <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-                <label for="nav-trigger">
-                    <span class="menu-icon">
-                        <svg viewBox="0 0 18 15" width="18px" height="15px">
-                            <path
-                                d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z" />
-                        </svg>
-                    </span>
-                </label>
-
-                <div class="trigger"><a class="page-link" href="/navigation/blogs/">Blogs</a><a class="page-link" href="/search/">Search</a><a class="page-link" href="/capstone/">Capstone</a>
-                    <a id="loginArea" class="page-link" href="/login">Login</a>
-                </div>
-            </nav></div>
-    </header>
-
-    <script type="module" src="/assets/js/api/login.js"></script>    
-
-
-        
-
-        
-
-        <main class="page-content" aria-label="Content">
-            <div class="wrapper">
-                                <div class="opencs_root">
-                                    
-
-
-
-
-
-
-
-
-
-
-
-
-<style>
-  /* === Post Header === */
-  .post-header h3 {
-    font-size: 1.8rem;
-    font-weight: 600;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    line-height: 1.3;
-  }
-
-  .page-description {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 1rem;
-  }
-
-  /* === Meta Info (date, author, reading time) === */
-  .post-meta {
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 0.5rem;
-  }
-
-  .post-meta time {
-    font-weight: 500;
-  }
-
-  /* === Category & Breadcrumb Links === */
-  .category-tags-link {
-    display: inline-block;
-    padding: 0.2rem 0.6rem;
-    margin: 0.1rem;
-    font-size: 0.85rem;
-    background: #f5f5f5;
-    border-radius: 999px;
-    color: #333;
-    text-decoration: none;
-    transition: background 0.2s ease;
-  }
-
-  .category-tags-link:hover {
-    background: #e0e0e0;
-  }
-
-  .post-header {
-    margin-bottom: 1rem;
-  }
-
-  .post-header-actions {
-    margin-top: 0.85rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.45rem;
-  }
-
-  .post-primary-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
-    padding: 0.4rem 0.78rem;
-    border: 1px solid #1d4ed8;
-    border-radius: 999px;
-    background: #2563eb;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 0.83rem;
-    font-weight: 700;
-    line-height: 1.2;
-    transition: background 0.2s ease, border-color 0.2s ease;
-  }
-
-  .post-primary-link:hover,
-  .post-primary-link:focus-visible {
-    background: #1d4ed8;
-    border-color: #1e40af;
-    color: #ffffff;
-  }
-
-  .post-secondary-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
-    padding: 0.35rem 0.7rem;
-    border: 1px solid #d1d5db;
-    border-radius: 999px;
-    background: #f8fafc;
-    color: #374151;
-    text-decoration: none;
-    font-size: 0.82rem;
-    font-weight: 600;
-    line-height: 1.2;
-    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
-  }
-
-  .post-secondary-link:hover,
-  .post-secondary-link:focus-visible {
-    background: #eef2f7;
-    border-color: #9ca3af;
-    color: #1f2937;
-  }
-
-  .post-header a.category-tags-link {
-    margin-right: 0.3rem;
-  }
-
-  /* === Main Content Styling === */
-  .post-content {
-    line-height: 1.7;
-    font-size: 1rem;
-  }
-
-  .post-content h2,
-  .post-content h3 {
-    margin-top: 1.5rem;
-    margin-bottom: 0.75rem;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 0.3rem;
-  }
-
-  /* === Comments Section Separator === */
-  .post-content+div,
-  .post-content+section {
-    margin-top: 2rem;
-    padding-top: 1rem;
-    border-top: 1px solid #ddd;
-  }
-
-  /* Assignment Submission Widget */
-  .assignment-submission {
-    margin-top: 48px;
-    padding: 24px;
-    background: #f9f9f9;
-    border: 1px solid #e0e0e0;
-    border-radius: 12px;
-  }
-
-  .assignment-submission h3 {
-    color: #333;
-    font-size: 1.25rem;
-    margin: 0 0 16px 0;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .assignment-submission-icon {
-    color: #2563eb;
-  }
-
-  .submission-options {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-  }
-
-  .submission-tab {
-    padding: 8px 16px;
-    background: white;
-    border: 1px solid #d0d0d0;
-    border-radius: 6px;
-    color: #555;
-    cursor: pointer;
-    transition: all 0.2s;
-  }
-
-  .submission-tab:hover {
-    background: #f0f0f0;
-    color: #333;
-  }
-
-  .submission-tab.active {
-    background: #2563eb;
-    color: white;
-    border-color: #2563eb;
-  }
-
-  .submission-form {
-    display: none;
-  }
-
-  .submission-form.active {
-    display: block;
-  }
-
-  .form-group {
-    margin-bottom: 16px;
-  }
-
-  .form-group label {
-    display: block;
-    color: #333;
-    font-size: 14px;
-    margin-bottom: 8px;
-    font-weight: 500;
-  }
-
-  .form-group input[type="text"],
-  .form-group input[type="url"],
-  .form-group textarea {
-    width: 100%;
-    padding: 10px 12px;
-    background: white;
-    border: 1px solid #d0d0d0;
-    border-radius: 6px;
-    color: #333;
-    font-size: 14px;
-    font-family: inherit;
-  }
-
-  .form-group input:focus,
-  .form-group textarea:focus {
-    outline: none;
-    border-color: #2563eb;
-  }
-
-  .form-group textarea {
-    min-height: 100px;
-    resize: vertical;
-  }
-
-  .file-upload-area {
-    border: 2px dashed #d0d0d0;
-    border-radius: 8px;
-    padding: 32px;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.2s;
-    background: white;
-  }
-
-  .file-upload-area:hover {
-    border-color: #2563eb;
-    background: #f0f7ff;
-  }
-
-  .file-upload-area.dragover {
-    border-color: #2563eb;
-    background: #f0f7ff;
-  }
-
-  .file-upload-icon {
-    font-size: 48px;
-    color: #2563eb;
-    margin-bottom: 12px;
-  }
-
-  .file-upload-text {
-    color: #555;
-    margin-bottom: 8px;
-  }
-
-  .file-upload-hint {
-    color: #999;
-    font-size: 12px;
-  }
-
-  .file-list {
-    margin-top: 16px;
-  }
-
-  .file-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px;
-    background: white;
-    border: 1px solid #e0e0e0;
-    border-radius: 6px;
-    margin-bottom: 8px;
-  }
-
-  .file-info {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .file-name {
-    color: #333;
-    font-size: 14px;
-  }
-
-  .file-size {
-    color: #999;
-    font-size: 12px;
-  }
-
-  .remove-file {
-    background: transparent;
-    border: none;
-    color: #999;
-    cursor: pointer;
-    padding: 4px 8px;
-    border-radius: 4px;
-    transition: all 0.2s;
-  }
-
-  .remove-file:hover {
-    background: #fee;
-    color: #dc2626;
-  }
-
-  .submit-btn {
-    padding: 12px 24px;
-    background: #2563eb;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 500;
-    transition: all 0.2s;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .submit-btn:hover {
-    background: #1d4ed8;
-  }
-
-  .submit-btn:disabled {
-    background: #d0d0d0;
-    color: #999;
-    cursor: not-allowed;
-  }
-
-  .submission-status {
-    margin-top: 16px;
-    padding: 12px;
-    border-radius: 6px;
-    display: none;
-  }
-
-  .submission-status.success {
-    display: block;
-    background: #dbeafe;
-    border: 1px solid #2563eb;
-    color: #1e40af;
-  }
-
-  .submission-status.error {
-    display: block;
-    background: #fee2e2;
-    border: 1px solid #dc2626;
-    color: #991b1b;
-  }
-
-  .submission-status.loading {
-    display: block;
-    background: #dbeafe;
-    border: 1px solid #3b82f6;
-    color: #1d4ed8;
-  }
-</style>
-
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-
-  <header class="post-header">
-    
-    
-    
-    
-    
-    
-    Breadcrumb:
-    <a class="category-tags-link" href="/github/pages">/github/pages</a>
-    
-    
-    
-    <p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-08-23T00:00:00+00:00" itemprop="datePublished">
-        Aug 23, 2023
-      </time>• <span class="read-time" title="Estimated read time">
-    
-     8 min read  </span></p>
-    <h3>Build a Markdown Page</h3><p class="page-description">JavaScript, HTML, CSS and Markdown are coding languages used by bloggers when developing in the GitHub Pages system. By using these languages, student developers can add functionality to their GitHub pages site.</p></header>
-
-  <div class="post-content e-content" itemprop="articleBody"><ul><li><a href="#html-fragments-and-markdown">HTML Fragments and Markdown</a></li><li><a href="#code-fragments">Code Fragments</a><ul><li><a href="#github-pages-indexmd">GitHub Pages index.md</a></li><li><a href="#images">Images</a></li><li><a href="#links">Links</a></li></ul></li><li><a href="#changing-the-theme">Changing the Theme</a><ul><li><a href="#github-pages-theme">GitHub Pages Theme</a></li><li><a href="#remote-theme">Remote Theme</a></li><li><a href="#minima-custom-syles">Minima Custom Syles</a></li></ul></li></ul><h2 id="html-fragments-and-markdown">HTML Fragments and Markdown</h2>
-
-<p><strong>Building a front-end web application requires HTML, CSS, and JavaScript</strong>. HTML is responsible for the content, CSS adds styling to the web page, and JavaScript adds functionality and interactivity.  <strong>Markdown is a shorthand way of writing HTML</strong>, the GitHub pages system transforms the Markdown into HTML.</p>
-
-<p>In GitHub Pages, <strong>Jekyll serves as the build framework</strong>. It takes your <strong>choice of theme specified in the <code class="language-plaintext highlighter-rouge">_config.yml</code> file</strong>, along with your Markdown, HTML, and notebook files, to construct a website.</p>
-
-<p>A significant portion of the <strong>frontend design work</strong> has been done for you <strong>through the selection and use of a theme</strong>; this greatly <strong>reduces the need to extensively write in CSS</strong>.</p>
-
-<p>Jekyll converts Markdown (.md) files into HTML. Behind the scenes of GitHub Pages, Jekyll and Liquid programming language build and programmatically construct each Markdown file into a specific web page. Markdown provides a straightforward way to start with GitHub Pages development. <strong>In an IPYNB or a Markdown file, you can exclusively use Markdown syntax or incorporate HTML, CSS, and JavaScript</strong> based on your expertise and experience.</p>
+Jekyll converts Markdown (.md) files into HTML. Behind the scenes of GitHub Pages, Jekyll and Liquid programming language build and programmatically construct each Markdown file into a specific web page. Markdown provides a straightforward way to start with GitHub Pages development. **In an IPYNB or a Markdown file, you can exclusively use Markdown syntax or incorporate HTML, CSS, and JavaScript** based on your expertise and experience.
 
 <!-- FRQ -->
 <div class="frq-block">
@@ -501,53 +23,49 @@
   <textarea id="frq_markdown_1"></textarea>
 </div>
 
-<h2 id="code-fragments">Code Fragments</h2>
+## Code Fragments
 
-<blockquote>
-  <p>This section is intended to describe and show code fragments.  The purpose is to get the student developer ready for coding and commiting changes to their personal GitHub Pages and support meeting goals for their mini project.</p>
-</blockquote>
+> This section is intended to describe and show code fragments.  The purpose is to get the student developer ready for coding and commiting changes to their personal GitHub Pages and support meeting goals for their mini project.
 
-<h3 id="github-pages-indexmd">GitHub Pages index.md</h3>
+### GitHub Pages index.md
 
-<p>In GitHub Pages, you can define code in Markdown. The pages <strong>index.md uses markdown</strong> to define a page about CompSci courses at Del Norte High School.</p>
+In GitHub Pages, you can define code in Markdown. The pages **index.md uses markdown** to define a page about CompSci courses at Del Norte High School.
 
-<ul>
-  <li>Markdown fragment. The markdown fragment is written by the developer and is an example of how to start a home page using Markdown.</li>
-</ul>
+- Markdown fragment. The markdown fragment is written by the developer and is an example of how to start a home page using Markdown.
 
-<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gu">## Build your Home Page here </span>
-<span class="gh"># Investing in your Technical Future</span>
-<span class="gt">&gt; Explore the Computer Science Pathway at Del Norte High School and invest in your technical skills. All Del Norte CompSci classes are designed to provide a real-world development experience. Class time includes tech talks (lectures), peer collaboration, communication with teachers, critical thinking while coding, and creativity in projects. Grading is focused on time invested, participation with peers, and engagement in learning.</span>
-<span class="p">-</span> Introduction to concepts and requirements by the teacher
-<span class="p">-</span> Project-based learning with teacher support
-<span class="p">-</span> Peer teams, team work, communication and collaboration
-<span class="p">-</span> Student presentations, peer teaching, and peer grading
-<span class="p">-</span> Coding, Development, DevOps, and critical thinking
-<span class="p">-</span> Creativity, research, and utilizing ChatGPT
-<span class="p">-</span> Classroom work 3-4 hours, with approximately 2-3 hours of homework per week
-
-<span class="p">![</span><span class="nv">csse</span><span class="p">](</span><span class="sx">/images/ccr.png</span><span class="p">)</span>
-</code></pre></div></div>
-
-<ul>
-  <li>HTML conversion.  The HTML <mark>conversion of the Markdown fragment produced by GitHub Pages using Jekyll</mark>. This is programmatically converted from Markdown to HTML.</li>
-</ul>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"language-markdown highlighter-rouge"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;pre</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;code&gt;</span>  
+~~~markdown
 ## Build your Home Page here 
 # Investing in your Technical Future
-<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"gt"</span><span class="nt">&gt;</span>  <span class="ni">&amp;gt;</span> Explore the Computer Science Pathway at Del Norte High School and invest in your technical skills. All Del Norte CompSci classes are designed to provide a real-world development experience. Class time includes tech talks (lectures), peer collaboration, communication with teachers, critical thinking while coding, and creativity in projects. Grading is focused on time invested, participation with peers, and engagement in learning.<span class="nt">&lt;/span&gt;</span>
-<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>  -<span class="nt">&lt;/span&gt;</span> Introduction to concepts and requirements by the teacher
-<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>  -<span class="nt">&lt;/span&gt;</span> Project-based learning with teacher support
-<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>  -<span class="nt">&lt;/span&gt;</span> Peer communication and collaboration
-<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>  -<span class="nt">&lt;/span&gt;</span> Coding, developer operations, and critical thinking
-<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>  -<span class="nt">&lt;/span&gt;</span> Creativity, research, and utilizing ChatGPT
-<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>  -<span class="nt">&lt;/span&gt;</span> Class work with approximately 2-3 hours of homework per week
+> Explore the Computer Science Pathway at Del Norte High School and invest in your technical skills. All Del Norte CompSci classes are designed to provide a real-world development experience. Class time includes tech talks (lectures), peer collaboration, communication with teachers, critical thinking while coding, and creativity in projects. Grading is focused on time invested, participation with peers, and engagement in learning.
+- Introduction to concepts and requirements by the teacher
+- Project-based learning with teacher support
+- Peer teams, team work, communication and collaboration
+- Student presentations, peer teaching, and peer grading
+- Coding, Development, DevOps, and critical thinking
+- Creativity, research, and utilizing ChatGPT
+- Classroom work 3-4 hours, with approximately 2-3 hours of homework per week
 
-!<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>[<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nv"</span><span class="nt">&gt;</span>csse<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>](<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sx"</span><span class="nt">&gt;</span>/teacher/images/ccr.png<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>)<span class="nt">&lt;/span&gt;</span>
-<span class="nt">&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</span>    
-<span class="nt">&lt;/div&gt;</span>
-</code></pre></div></div>
+![csse]({{site.baseurl}}/images/ccr.png)
+~~~
+
+- HTML conversion.  The HTML <mark>conversion of the Markdown fragment produced by GitHub Pages using Jekyll</mark>. This is programmatically converted from Markdown to HTML.
+
+~~~html
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  
+## Build your Home Page here 
+# Investing in your Technical Future
+<span class="gt">  &gt; Explore the Computer Science Pathway at Del Norte High School and invest in your technical skills. All Del Norte CompSci classes are designed to provide a real-world development experience. Class time includes tech talks (lectures), peer collaboration, communication with teachers, critical thinking while coding, and creativity in projects. Grading is focused on time invested, participation with peers, and engagement in learning.</span>
+<span class="p">  -</span> Introduction to concepts and requirements by the teacher
+<span class="p">  -</span> Project-based learning with teacher support
+<span class="p">  -</span> Peer communication and collaboration
+<span class="p">  -</span> Coding, developer operations, and critical thinking
+<span class="p">  -</span> Creativity, research, and utilizing ChatGPT
+<span class="p">  -</span> Class work with approximately 2-3 hours of homework per week
+
+!<span class="p">[</span><span class="nv">csse</span><span class="p">](</span><span class="sx">/teacher/images/ccr.png</span><span class="p">)</span>
+</code></pre></div>    
+</div>
+~~~
 
 <!-- FRQ -->
 <div class="frq-block">
@@ -555,14 +73,12 @@
   <textarea id="frq_markdown_2"></textarea>
 </div>
 
-<h3 id="images">Images</h3>
+### Images
 
-<p>In GitHub Pages, you can <mark>insert images</mark> in HTML or Markdown.  The Teacher finds &lt;img&gt; easier to work with for embedding links when trying to control size.  This example shows Markdown syntax for embedding images, but students can also use HTML syntax with the &lt;img&gt; tag.</p>
+In GitHub Pages, you can <mark>insert images</mark> in HTML or Markdown.  The Teacher finds &lt;img&gt; easier to work with for embedding links when trying to control size.  This example shows Markdown syntax for embedding images, but students can also use HTML syntax with the &lt;img&gt; tag.
 
-<ul>
-  <li>See index.md for <img src="" alt="" /> syntax for images, or reference <a href="https://www.markdownguide.org/basic-syntax/#images-1">Markdown images</a></li>
-  <li>Or use “img” tage referencing <a href="https://www.w3schools.com/html/html_images.asp">HTML images</a></li>
-</ul>
+- See index.md for ![]() syntax for images, or reference [Markdown images](https://www.markdownguide.org/basic-syntax/#images-1)
+- Or use "img" tage referencing [HTML images](https://www.w3schools.com/html/html_images.asp)
 
 <!-- FRQ -->
 <div class="frq-block">
@@ -570,13 +86,11 @@
   <textarea id="frq_markdown_3"></textarea>
 </div>
 
-<h3 id="links">Links</h3>
+### Links
 
-<p>HTML contains a <code class="language-plaintext highlighter-rouge">&lt;</code><code class="language-plaintext highlighter-rouge">href&gt;</code>``` tag to <mark>create links</mark>. Students can use either HTML or Markdown syntax for links.</p>
+HTML contains a `<``href>```` tag to <mark>create links</mark>. Students can use either HTML or Markdown syntax for links.
 
-<ul>
-  <li>Look up <a href="https://www.w3schools.com/html/html_links.asp">HTML links</a> &lt;href&gt; or <a href="https://www.markdownguide.org/basic-syntax/#links">Markdown links</a> <a href=""></a> syntax.  These should become easy and familiar.</li>
-</ul>
+- Look up [HTML links](https://www.w3schools.com/html/html_links.asp) &lt;href&gt; or [Markdown links](https://www.markdownguide.org/basic-syntax/#links) []() syntax.  These should become easy and familiar.
 
 <!-- FRQ -->
 <div class="frq-block">
@@ -584,55 +98,51 @@
   <textarea id="frq_markdown_4"></textarea>
 </div>
 
-<h2 id="changing-the-theme">Changing the Theme</h2>
-<blockquote>
-  <p>Google “github pages themes”  or this <a href="https://pages.github.com/themes/">theme link</a>.   The purpose of this section is to help you change your Theme options.</p>
-  <ul>
-    <li><code class="language-plaintext highlighter-rouge">_config.yml</code> contains commented out alternatives to themes (see ‘# theme requirements’ cell below).  Try these themes by commenting out midnight them with # at front and remove comment # from the front of theme of choice.  After changing theme you will need to do a <code class="language-plaintext highlighter-rouge">make clean</code>  followed by a <code class="language-plaintext highlighter-rouge">make</code> to test.</li>
-    <li><code class="language-plaintext highlighter-rouge">_includes/head.html</code> this file contains code to ensure page loads the proper JavaScript.  This is a partial effort at support.  You will need to follow README.md instruction of theme provider to finish convertion. FYI, the head.html is included from <code class="language-plaintext highlighter-rouge">_layouts/default.html</code>  Go to <a href="https://pages.github.com/themes/">Themes</a>  click on Theme and scroll down to README.md and review requirements.  Look their _layouts.html to understand requirements for integration.</li>
-    <li>Reading README.md should become common practice when using a repository.  You should make sure your README has instructions.  Also, in the Theme case, the best way to understand and make your own customizations is to understand how Theme providers customized theirs.  Review these diligently if you want to become proficient and customizing your page.</li>
-  </ul>
-</blockquote>
+## Changing the Theme
+> Google "github pages themes"  or this [theme link](https://pages.github.com/themes/).   The purpose of this section is to help you change your Theme options.
+- ```_config.yml``` contains commented out alternatives to themes (see '# theme requirements' cell below).  Try these themes by commenting out midnight them with # at front and remove comment # from the front of theme of choice.  After changing theme you will need to do a `make clean`  followed by a `make` to test.
+-  ```_includes/head.html``` this file contains code to ensure page loads the proper JavaScript.  This is a partial effort at support.  You will need to follow README.md instruction of theme provider to finish convertion. FYI, the head.html is included from ```_layouts/default.html```  Go to [Themes](https://pages.github.com/themes/)  click on Theme and scroll down to README.md and review requirements.  Look their _layouts.html to understand requirements for integration.
+- Reading README.md should become common practice when using a repository.  You should make sure your README has instructions.  Also, in the Theme case, the best way to understand and make your own customizations is to understand how Theme providers customized theirs.  Review these diligently if you want to become proficient and customizing your page.
 
-<h3 id="github-pages-theme">GitHub Pages Theme</h3>
+### GitHub Pages Theme
 
-<p>A web page theme typically includes the layout of elements such as menus, headers, and footers, as well as colors, highlights, and fonts. The theme ensures a consistent look and feel across the entire web application.</p>
+A web page theme typically includes the layout of elements such as menus, headers, and footers, as well as colors, highlights, and fonts. The theme ensures a consistent look and feel across the entire web application.
 
-<p>After selecting a theme, <strong>minimize custom styles on individual pages</strong> to maintain a consistent and professional appearance. Relying on the predefined styles of the theme ensures a cohesive look and feel, enhancing the user experience and reinforcing your brand identity.</p>
+After selecting a theme, **minimize custom styles on individual pages** to maintain a consistent and professional appearance. Relying on the predefined styles of the theme ensures a cohesive look and feel, enhancing the user experience and reinforcing your brand identity.
 
-<p>Note: Extensive CSS customization can be time-consuming and challenging for beginners. It’s better to <strong>learn the GitHub Pages way</strong> for themes.</p>
+Note: Extensive CSS customization can be time-consuming and challenging for beginners. It's better to **learn the GitHub Pages way** for themes. 
 
-<p>Students should select a theme and work with Markdown or HTML fragments in notebooks and posts. Accept and work with the style provided by the theme.</p>
+Students should select a theme and work with Markdown or HTML fragments in notebooks and posts. Accept and work with the style provided by the theme.
 
-<h3 id="remote-theme">Remote Theme</h3>
+### Remote Theme
 
-<ul>
-  <li>The design of GitHub pages allows us to <strong>change themes</strong> with the _config.yml file key/value, change the value to a <a href="https://pages.github.com/themes/">supported theme</a>.  Here is a portion of the config.yml, the <code class="language-plaintext highlighter-rouge">#</code> is a comment symbol.  Add a comment to midnight line, uncomment dinky line to try a new theme. Repeat the process until you find something you like.</li>
-</ul>
+- The design of GitHub pages allows us to **change themes** with the _config.yml file key/value, change the value to a [supported theme](https://pages.github.com/themes/).  Here is a portion of the config.yml, the `#` is a comment symbol.  Add a comment to midnight line, uncomment dinky line to try a new theme. Repeat the process until you find something you like. 
 
-<p>This is currently selected theme in your provided code.  To change themes you will comment out or remove the remote_theme line, the lines after are for minima but would be ignored as you select other themes.</p>
+This is currently selected theme in your provided code.  To change themes you will comment out or remove the remote_theme line, the lines after are for minima but would be ignored as you select other themes.
 
-<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">remote_theme</span><span class="pi">:</span> <span class="s">jekyll/minima</span>
-<span class="na">minima</span><span class="pi">:</span>
-  <span class="na">skin</span><span class="pi">:</span> <span class="s">dark</span>
-  <span class="na">social_links</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="pi">{</span> <span class="nv">platform</span><span class="pi">:</span> <span class="nv">github</span><span class="pi">,</span> <span class="nv">user_url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://github.com/open-coding-society"</span><span class="pi">}</span>
-    <span class="pi">-</span> <span class="pi">{</span> <span class="nv">platform</span><span class="pi">:</span> <span class="nv">x</span><span class="pi">,</span> <span class="nv">user_url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://x.com/NighthawkCoding/"</span> <span class="pi">}</span>
-    <span class="pi">-</span> <span class="pi">{</span> <span class="nv">platform</span><span class="pi">:</span> <span class="nv">youtube</span><span class="pi">,</span> <span class="nv">user_url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://www.youtube.com/@nighthawkcodingsociety2868"</span> <span class="pi">}</span>      
-</code></pre></div></div>
+~~~yml
+remote_theme: jekyll/minima
+minima:
+  skin: dark
+  social_links:
+    - { platform: github, user_url: "https://github.com/open-coding-society"}
+    - { platform: x, user_url: "https://x.com/NighthawkCoding/" }
+    - { platform: youtube, user_url: "https://www.youtube.com/@nighthawkcodingsociety2868" }      
+~~~
 
-<p>To select a different them you will uncomment one of the selected lines.  There are more themes out there than shown and there are several additional customization required.  You will be required to run <strong>make</strong> between each theme selection.  Be sure to look at and test several pages before you settle in, the don’t all work.</p>
+To select a different them you will uncomment one of the selected lines.  There are more themes out there than shown and there are several additional customization required.  You will be required to run **make** between each theme selection.  Be sure to look at and test several pages before you settle in, the don't all work.
 
-<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># theme requirements</span>
-<span class="na">remote_theme</span><span class="pi">:</span> <span class="s">pages-themes/midnight@v0.2.0</span>
-<span class="c1"># remote_theme: pages-themes/dinky@v0.2.0</span>
-<span class="c1"># remote_theme: pages-themes/minimal@v0.2.0</span>
-<span class="c1"># remote_theme: pages-themes/hacker@v0.2.0</span>
-<span class="c1"># remote_theme: pages-themes/cayman@v0.2.0</span>
-<span class="c1"># remote_theme: pages-themes/time-machine@v0.2.0</span>
-<span class="na">plugins</span><span class="pi">:</span>
-<span class="pi">-</span> <span class="s">jekyll-remote-theme</span>
-</code></pre></div></div>
+~~~yml
+# theme requirements
+remote_theme: pages-themes/midnight@v0.2.0
+# remote_theme: pages-themes/dinky@v0.2.0
+# remote_theme: pages-themes/minimal@v0.2.0
+# remote_theme: pages-themes/hacker@v0.2.0
+# remote_theme: pages-themes/cayman@v0.2.0
+# remote_theme: pages-themes/time-machine@v0.2.0
+plugins:
+- jekyll-remote-theme
+~~~
 
 <!-- FRQ -->
 <div class="frq-block">
@@ -640,33 +150,32 @@
   <textarea id="frq_markdown_5"></textarea>
 </div>
 
-<h3 id="minima-custom-syles">Minima Custom Syles</h3>
+### Minima Custom Syles
 
-<p>The Teacher and many students from previous years have focused on the <strong>minima</strong> theme.  This has allowed the developers on this theme to add elements to the <strong>_sass/minima/custom-styles.sccs</strong>.</p>
+The Teacher and many students from previous years have focused on the **minima** theme.  This has allowed the developers on this theme to add elements to the **_sass/minima/custom-styles.sccs**.
 
-<ol>
-  <li>The dracula them is most commonly used, but leaf and hacker are pretty well developed.  The Teacher favorite is leaf but it has some top navigation problems.</li>
-  <li>The dracula/dark-mode can be included on multiple themes.  This is a great way to preserve your eyeballs.</li>
-  <li>The inclusion of nighthawk main is some nighthawk customizations.   Thie is the <strong>mimima way</strong> for adding to style use proper Syntactically Awsesome Style Sheets (SASS).</li>
-</ol>
+1. The dracula them is most commonly used, but leaf and hacker are pretty well developed.  The Teacher favorite is leaf but it has some top navigation problems.
+2. The dracula/dark-mode can be included on multiple themes.  This is a great way to preserve your eyeballs.
+3. The inclusion of nighthawk main is some nighthawk customizations.   Thie is the **mimima way** for adding to style use proper Syntactically Awsesome Style Sheets (SASS).
 
-<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Comment in or Uncomment out the following themes to use them </span>
+~~~scss
+// Comment in or Uncomment out the following themes to use them 
 
-<span class="c1">// Dark themes</span>
-<span class="c1">//@import "minima/leaf/_leaf";  //Leaf theme</span>
-<span class="c1">//@import "minima/hacker/jekyll-theme-hacker"; //Hacker theme </span>
-<span class="k">@import</span> <span class="s2">"minima/dracula/_dracula"</span><span class="p">;</span>
+// Dark themes
+//@import "minima/leaf/_leaf";  //Leaf theme
+//@import "minima/hacker/jekyll-theme-hacker"; //Hacker theme 
+@import "minima/dracula/_dracula";
 
-<span class="c1">// Light themes</span>
-<span class="c1">//@import "minima/hamilton/main"; //Hamilton theme</span>
-<span class="c1">//@import "minima/monophase/main"; //Monophase theme </span>
-<span class="c1">//@import "minima/minimal-mistakes/__minimal-mistakes"; //Minimal Mistakes theme </span>
-<span class="c1">// Mix Light themes with this if your eyes are bleeding </span>
-<span class="k">@import</span> <span class="s2">"minima/dracula/dark-mode"</span><span class="p">;</span>
+// Light themes
+//@import "minima/hamilton/main"; //Hamilton theme
+//@import "minima/monophase/main"; //Monophase theme 
+//@import "minima/minimal-mistakes/__minimal-mistakes"; //Minimal Mistakes theme 
+// Mix Light themes with this if your eyes are bleeding 
+@import "minima/dracula/dark-mode";
 
-<span class="c1">// Styles for nighthawk theme, do not remove</span>
-<span class="k">@import</span> <span class="s2">"nighthawk/main"</span><span class="p">;</span>
-</code></pre></div></div>
+// Styles for nighthawk theme, do not remove
+@import "nighthawk/main";
+~~~
 
 <!-- FRQ -->
 <div class="frq-block">
@@ -711,117 +220,3 @@
 }
 </style>
 
-
-
-    
-
-    
-
-    
-  </div><a class="u-url" href="/github/pages/markdown" hidden></a>
-
-  <!-- Enhanced Analytics Tracking -->
-  <script type="module">
-    import { pythonURI, javaURI, fetchOptions } from '/assets/js/api/config.js';
-    window.pythonURI = pythonURI;
-    window.javaURI = javaURI;
-    window.fetchOptions = fetchOptions;
-  </script>
-  <script src="/assets/js/ocs-analytics-enhanced.js"></script>
-  <script src="/assets/js/code-runner-analytics.js"></script>
-  <script src="/assets/js/lesson-completion.js"></script>
-  <script src="/assets/js/lesson-completion-bigsix.js"></script>
-</article>
-
-
-                                </div>
-            </div>
-        </main><footer id="masterFooter" class="site-footer h-card">
-    <data class="u-url" href="/"></data>
-
-    <!-- <div class="wrapper">
-
-        <div class="social-links"><ul class="social-media-list"><li>
-    <a rel="me" href="" target="_blank" title="">
-      <span class="grey fa-brands fa- fa-lg"></span>
-    </a>
-  </li><li>
-    <a rel="me" href="" target="_blank" title="">
-      <span class="grey fa-brands fa- fa-lg"></span>
-    </a>
-  </li><li>
-    <a rel="me" href="" target="_blank" title="">
-      <span class="grey fa-brands fa- fa-lg"></span>
-    </a>
-  </li>
-  <li>
-    <a href="/feed.xml" target="_blank" title="Subscribe to syndication feed">
-      <svg class="svg-icon grey" viewbox="0 0 16 16">
-        <path d="M12.8 16C12.8 8.978 7.022 3.2 0 3.2V0c8.777 0 16 7.223 16 16h-3.2zM2.194
-          11.61c1.21 0 2.195.985 2.195 2.196 0 1.21-.99 2.194-2.2 2.194C.98 16 0 15.017 0
-          13.806c0-1.21.983-2.195 2.194-2.195zM10.606
-          16h-3.11c0-4.113-3.383-7.497-7.496-7.497v-3.11c5.818 0 10.606 4.79 10.606 10.607z"
-        />
-      </svg>
-    </a>
-  </li>
-</ul>
-</div>
-
-    </div> -->
-
-    <!--<p style="font-style: italic;">OpenAesthetic v3.0rc1.1</p>-->
-
-    <div class="footer-links">
-        <div class="footer-previous">
-            
-        </div>
-
-        <div class="footer-home">
-            
-        </div>
-
-        <div class="footer-next">
-            
-        </div>
-    </div>
-
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const style = getComputedStyle(document.documentElement);
-        const theme = style.getPropertyValue('--theme').trim() || "dark";
-        const panel = style.getPropertyValue('--panel-mid').trim() || "#0b1220";
-        const text = style.getPropertyValue('--pref-text-color').trim() || "#e6eef8";
-        const accent = style.getPropertyValue('--pref-accent-color').trim() || "#3b82f6";
-        const fontFamily = style.getPropertyValue('--pref-font-family').trim() || "Arial, sans-serif";
-        mermaid.initialize({ 
-            startOnLoad: false,
-            theme: theme,
-            securityLevel: 'loose',
-            themeVariables: {
-                background: panel,
-                primaryColor: panel,
-                primaryTextColor: text,
-                primaryBorderColor: accent,
-                lineColor: text,
-                arrowheadColor: text,
-                fontFamily: fontFamily
-            }
-        });
-        
-        // Convert fenced code blocks to mermaid divs
-        document.querySelectorAll('pre code.language-mermaid').forEach((block, index) => {
-            const content = block.textContent;
-            const wrapper = document.createElement('div');
-            wrapper.className = 'mermaid';
-            wrapper.id = 'mermaid-' + index;
-            wrapper.textContent = content;
-            block.parentElement.parentNode.replaceChild(wrapper, block.parentElement);
-        });
-        
-        mermaid.run();
-    });
-</script></body>
-</html>

@@ -90,24 +90,23 @@ Hi! My name is Aidan Cetin
 ### Github Pages Foundations
 
 These topics tell me how my portfolio works and how GitHub Pages turn my files into a website
-<h2>GitHub Pages Foundations</h2>
 
 <table>
   <tr>
     <th>
-      <a href="{{site.baseurl}}/Jokes">
+      <a href="{{site.baseurl}}/jokes">
         Notebooks & Jokes
       </a>
     </th>
 
 <th>
-      <a href="{{site.baseurl}}/Anatomy">
+      <a href="{{site.baseurl}}/anatomy">
         Anatomy
       </a>
     </th>
 
 <th>
-      <a href="{{site.baseurl}}/Theme">
+      <a href="{{site.baseurl}}/theme">
         Theme
       </a>
     </th>
@@ -120,19 +119,19 @@ These topics tell me how my portfolio works and how GitHub Pages turn my files i
   </tr>
   <tr>
     <th>
-      <a href="{{site.baseurl}}/Markdown">
+      <a href="{{site.baseurl}}/markdown">
         Markdown
       </a>
     </th>
 
 <th>
-      <a href="{{site.baseurl}}/Jekyll">
+      <a href="{{site.baseurl}}/jekyll">
         Jekyll
       </a>
     </th>
 
 <th>
-      <a href="{{site.baseurl}}/Jekyll">
+      <a href="{{site.baseurl}}/hacks">
         Hacks
       </a>
     </th>
