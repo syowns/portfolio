@@ -11,7 +11,7 @@ Hi! My name is Aidan Cetin
         <img src="{{ '/favicon.ico' | relative_url }}" alt="OCS logo" style="width: 16px; height: 16px;">
         About Me
     </a>
-
+</div>
 ### Development Environment
 
 
@@ -92,6 +92,7 @@ Hi! My name is Aidan Cetin
 These topics tell me how my portfolio works and how GitHub Pages turn my files into a website
 <h2>GitHub Pages Foundations</h2>
 
+<table>
   <tr>
     <th>
       <a href="{{site.baseurl}}/Jokes">
@@ -99,24 +100,24 @@ These topics tell me how my portfolio works and how GitHub Pages turn my files i
       </a>
     </th>
 
-    <th>
+<th>
       <a href="{{site.baseurl}}/Anatomy">
         Anatomy
       </a>
     </th>
 
-    <th>
+<th>
       <a href="{{site.baseurl}}/Theme">
         Theme
       </a>
     </th>
-  <tr>
+  </tr>
 
  <tr>
     <td>Fun with JavaScript and Jupyter Notebooks</td>
     <td>Learn the structure of a GitHub Pages site</td>
     <td>Learn how themes and styling change the website</td>       
-  <tr>
+  </tr>
   <tr>
     <th>
       <a href="{{site.baseurl}}/Markdown">
