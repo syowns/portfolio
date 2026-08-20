@@ -94,19 +94,19 @@ These topics tell me how my portfolio works and how GitHub Pages turn my files i
 <table>
   <tr>
     <th>
-      <a href="{{site.baseurl}}/jokes">
+      <a href="{{site.baseurl}}/github/pages/jokes">
         Notebooks & Jokes
       </a>
     </th>
 
 <th>
-      <a href="{{site.baseurl}}/anatomy">
+      <a href="{{site.baseurl}}/github/pages/anatomy">
         Anatomy
       </a>
     </th>
 
 <th>
-      <a href="{{site.baseurl}}/theme">
+      <a href="{{site.baseurl}}/github/pages/theme">
         Theme
       </a>
     </th>
@@ -119,19 +119,19 @@ These topics tell me how my portfolio works and how GitHub Pages turn my files i
   </tr>
   <tr>
     <th>
-      <a href="{{site.baseurl}}/markdown">
+      <a href="{{site.baseurl}}/github/pages/markdown">
         Markdown
       </a>
     </th>
 
 <th>
-      <a href="{{site.baseurl}}/jekyll">
+      <a href="{{site.baseurl}}/github/pages/jekyll">
         Jekyll
       </a>
     </th>
 
 <th>
-      <a href="{{site.baseurl}}/hacks">
+      <a href="{{site.baseurl}}/github/pages/hacks">
         Hacks
       </a>
     </th>
@@ -144,4 +144,5 @@ These topics tell me how my portfolio works and how GitHub Pages turn my files i
   </tr>
 </table>
 
+Github Pages uses Markdown, HTML, CSS, and Jekyll to build and publish my portfolio. Markdown organizes content, HTML and CSS control how pages look, and Jekyll turns the files in my repository into the website.
 <br>

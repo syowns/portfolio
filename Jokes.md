@@ -1,4 +1,3 @@
-```python
 ---
 layout: post
 toc: True
