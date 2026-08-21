@@ -18,7 +18,7 @@ Hi! My name is Aidan Cetin
 > Coding starts with tools, explore these tools and procedures with a click.
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-    <a href="https://opencodingsociety.com" style="text-decoration: none; display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border: 1px solid #FA8072; border-radius: 6px; font-weight: 700; transition: all 0.3s;">
+    <a href="{{site.baseurl}}/mcq" style="text-decoration: none; display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border: 1px solid #FA8072; border-radius: 6px; font-weight: 700; transition: all 0.3s;">
         <img src="{{ '/favicon.ico' | relative_url }}" alt="OCS logo" style="width: 16px; height: 16px;">
         OCS
     </a>
@@ -146,3 +146,14 @@ These topics tell me how my portfolio works and how GitHub Pages turn my files i
 
 Github Pages uses Markdown, HTML, CSS, and Jekyll to build and publish my portfolio. Markdown organizes content, HTML and CSS control how pages look, and Jekyll turns the files in my repository into the website.
 <br>
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <a href="{{site.baseurl}}/mcq" style="text-decoration: none; display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border: 1px solid #FA8072; border-radius: 6px; font-weight: 700; transition: all 0.3s;">
+        <img src="{{ '/favicon.ico' | relative_url }}" alt="OCS logo" style="width: 16px; height: 16px;">
+        Unit 1-4 MCQ Capture
+    </a>
+    <a href="{{site.baseurl}}/sdlc" style="text-decoration: none; display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border: 1px solid #FFF; border-radius: 6px; font-weight: 700; transition: all 0.3s;">
+    
+        SDLC Life Cycle
+    </a>
+</div>
